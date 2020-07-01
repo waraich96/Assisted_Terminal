@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+#import external modules
+import readline
+import sys
+import time
+import socket
+import os
+import subprocess
+import textwrap
+import threading
+import json
+
+try:
+	import colorama
+except ImportError as e:
+#install necessary dependency
+	print('''
+[!] Error importing colorama! Assisted Terminal works best with colorama. 
+You should be able to install it with the command:
+
+sudo apt-get install python-colorama
+''')
+
+	exit(-1)
+
+#import user-defined modules
+from shell.wrapper import AssistedTerminalWrapperClass
+from colours.colours import *
+
+if ( __name__ == "__main__" ):
+	#run
+	AssistedTerminal = AssistedTerminalWrapperClass()
+	AssistedTerminal.run()
+	'''
+	# This invokes the Assisted Terminal shell, which kickstarts the
+	# courses and all the other interactions with the program.
+	'''
